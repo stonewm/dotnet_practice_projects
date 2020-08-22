@@ -19,27 +19,29 @@ namespace DapperDemo
             return dbConnection.Query<T>(sql, pms);
         }
 
-        public IEnumerable<T> QueryStoredProc<T>(String sql, object pms = null)
+        public IEnumerable<T> QueryStoredProc<T>(String spName, object pms = null)
         {
-            return dbConnection.Query<T>(sql, pms, commandType: CommandType.StoredProcedure);
+            return dbConnection.Query<T>(
+                spName, pms, commandType: CommandType.StoredProcedure);
         }
 
         public T QueryFirst<T>(String sql, object pms = null) {
             return dbConnection.QueryFirst<T>(sql, pms);
         }
 
-        public T QueryFirstStoredProc<T>(String sql, object pms = null)
+        public T QueryFirstStoredProc<T>(String spName, object pms = null)
         {
-            return dbConnection.QueryFirst<T>(sql, pms, commandType: CommandType.StoredProcedure);
+            return dbConnection.QueryFirst<T>(
+                spName, pms, commandType: CommandType.StoredProcedure);
         }
 
         public int Execute(String sql, object pms = null) {
             return dbConnection.Execute(sql, pms);
         }
 
-        public int ExecuteStoredProc(String sql, object pms = null) {
-            return dbConnection.Execute(sql, pms, commandType: CommandType.StoredProcedure);
+        public int ExecuteStoredProc(String spName, object pms = null) {
+            return dbConnection.Execute(
+                spName, pms, commandType: CommandType.StoredProcedure);
         }
-
     }
 }

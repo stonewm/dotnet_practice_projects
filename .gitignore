@@ -9,6 +9,7 @@
 
 # folders
 ./
+.vs/
 .idea/
 .private/
 .vscode/
@@ -20,4 +21,3 @@ __pycache__/
 packages/
 TestResults/
 target/
-_v_recycle_bin/

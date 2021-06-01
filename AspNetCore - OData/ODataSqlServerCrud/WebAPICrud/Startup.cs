@@ -56,7 +56,7 @@ namespace WebAPICrud
 
             app.UseMvc(routeBuilder =>
             {
-                routeBuilder.Select().Filter().Expand();
+                routeBuilder.Select().Filter().Expand().MaxTop(100);
                 routeBuilder.MapODataServiceRoute("myroute", "odata", GetEdmModel());
                 routeBuilder.EnableDependencyInjection();
             });
@@ -71,6 +71,7 @@ namespace WebAPICrud
         {
             ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<Employee>("Employees");
+            builder.Namespace = typeof(Employee).Namespace;
             return builder.GetEdmModel();
         }
     }

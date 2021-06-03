@@ -1,0 +1,23 @@
+
+**** Trace file opened at 2021-06-02, 12:10:35 中国标准时间
+NW RFC Library: SDK variant, Release 750 Patch Level 0, Compiled on Nov 24 2017 21:59:13
+ CPIC library: 753.2017.11.08 version 3, NI library: 40, Kernel Release: 753 Patch Level 0
+ Current working directory: C:\Users\StoneWM\Desktop\pyrfc_sap_gl_balances_service\SAP_GL_Service, Program: python
+ Hardware: PC with Windows NT 4x AMD64 Level 6 (Mod 78 Step 3), Operating_system: Windows NT 10.0
+ Hostname: STONEWM-PC, IP address: 192.168.44.1, IPv6 address: 192.168.44.1
+
+Error during connect: 
+LOCATION    CPIC (TCP/IP) on local host StoneWM-PC with Unicode
+ERROR       hostname 'sapecc6' unknown
+TIME        Wed Jun 02 12:10:35 2021
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -2
+MODULE      D:/depot/bas/753_REL/src/base/ni/ninti.c
+LINE        898
+DETAIL      NiPGetHostByName: 'sapecc6' not found
+SYSTEM CALL getaddrinfo
+COUNTER     2
+
+

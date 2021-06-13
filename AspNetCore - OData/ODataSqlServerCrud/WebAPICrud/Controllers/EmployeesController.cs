@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNet.OData;
 using Microsoft.AspNet.OData.Routing;
 using Microsoft.AspNetCore.Mvc;
-using WebAPICrud.EmployeeService;
+using WebAPICrud.Services;
 using WebAPICrud.Models;
 
 namespace WebAPICrud.Controllers

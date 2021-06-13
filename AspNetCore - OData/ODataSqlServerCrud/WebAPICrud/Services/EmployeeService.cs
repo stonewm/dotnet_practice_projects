@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebAPICrud.Models;
 
-namespace WebAPICrud.EmployeeService
+namespace WebAPICrud.Services
 {
     public class EmployeeService : IEmployeeService
     {

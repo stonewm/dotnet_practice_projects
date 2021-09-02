@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using EmpService = WebAPICrud.EmployeeService;
+using EmpService = WebAPICrud.Services;
 using WebAPICrud.Models;
 using Microsoft.AspNet.OData.Extensions;
 using Microsoft.OData.Edm;
@@ -33,7 +33,7 @@ namespace WebAPICrud
             //services.AddControllers();
 
             services.AddDbContextPool<EmployeeContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("EmployeeDBConnectionString")));
+                options.UseSqlServer(Configuration.GetConnectionString("AppDb")));
 
             services.AddScoped<EmpService.IEmployeeService, EmpService.EmployeeService>();
 

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace AspNetCoreODataHello.Controllers
 {
-    public class StudentsController : ControllerBase
+    public class StudentsController : ODataController
     {
         [HttpGet]
         [EnableQuery()]

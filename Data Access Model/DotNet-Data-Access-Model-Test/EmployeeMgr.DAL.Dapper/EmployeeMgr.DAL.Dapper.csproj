@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0C9D19CF-9CD3-4101-982A-3B3A3C1B52A0}</ProjectGuid>
+    <ProjectGuid>{3CB170DC-FDED-4110-B61F-7B117D4EC25A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EmployeeMgr.Repository</RootNamespace>
-    <AssemblyName>EmployeeMgr.Repository</AssemblyName>
+    <RootNamespace>EmployeeMgr.DAL.Dapper</RootNamespace>
+    <AssemblyName>EmployeeMgr.DAL.Dapper</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.90\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,23 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmployeeRepository.cs" />
-    <Compile Include="IEmployeeRepository.cs" />
+    <Compile Include="EmployeeDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EmployeeMgr.DAL.Dapper\EmployeeMgr.DAL.Dapper.csproj">
-      <Project>{3cb170dc-fded-4110-b61f-7b117d4ec25a}</Project>
-      <Name>EmployeeMgr.DAL.Dapper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EmployeeMgr.DAL.SqlSugar\EmployeeMgr.DAL.SqlSugar.csproj">
-      <Project>{1aae1b73-3f24-48da-ae14-96a8b4f867cc}</Project>
-      <Name>EmployeeMgr.DAL.SqlSugar</Name>
-    </ProjectReference>
     <ProjectReference Include="..\EmployeeMgr.Domain\EmployeeMgr.Domain.csproj">
       <Project>{1e1e4ad7-a5dd-4fc0-87b2-fa7ce19d0504}</Project>
       <Name>EmployeeMgr.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

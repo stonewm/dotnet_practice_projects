@@ -1,4 +1,5 @@
-﻿using EmployeeMgr.DAL.SqlSugar;
+﻿//using EmployeeMgr.DAL.SqlSugar;
+using EmployeeMgr.DAL.Dapper;
 using EmployeeMgr.Domain;
 using System.Collections.Generic;
 

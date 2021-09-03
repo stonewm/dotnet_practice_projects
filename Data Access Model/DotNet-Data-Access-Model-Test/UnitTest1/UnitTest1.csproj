@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DapperCrudTest.cs" />
     <Compile Include="SqlSugarCrudTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -57,6 +58,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EmployeeMgr.DAL.Dapper\EmployeeMgr.DAL.Dapper.csproj">
+      <Project>{3cb170dc-fded-4110-b61f-7b117d4ec25a}</Project>
+      <Name>EmployeeMgr.DAL.Dapper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EmployeeMgr.DAL.SqlSugar\EmployeeMgr.DAL.SqlSugar.csproj">
       <Project>{1aae1b73-3f24-48da-ae14-96a8b4f867cc}</Project>
       <Name>EmployeeMgr.DAL.SqlSugar</Name>

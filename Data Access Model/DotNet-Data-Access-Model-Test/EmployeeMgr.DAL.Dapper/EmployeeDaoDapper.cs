@@ -1,14 +1,17 @@
-﻿using System;
+﻿using EmployeeMgr.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace DapperDemo
+namespace EmployeeMgr.DAL.Dapper
 {
-    public class EmpService : DapperHelper
+    public class EmployeeDaoDapper : DapperHelper
     {
         private DapperHelper db;
 
-        public EmpService()
+        public EmployeeDaoDapper()
         {
             db = new DapperHelper();
         }
@@ -18,20 +21,12 @@ namespace DapperDemo
             return db.QueryStoredProc<Employee>("sp_list_all_employees").ToList();
         }
 
-        public IList<Employee> FindByName(String empName)
-        {
-            return db.QueryStoredProc<Employee>(
-                "sp_find_employee_by_name",
-                new { name = empName }
-            ).ToList();           
-        }
-
         public Employee FindById(int empId)
         {
             return db.QueryFirstStoredProc<Employee>(
-                "sp_find_employee_by_id", 
+                "sp_find_employee_by_id",
                 new { emp_id = empId }
-            );            
+            );
         }
 
         public int Insert(Employee emp)

@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DapperCrudTest.cs" />
+    <Compile Include="DapperCrudTest2.cs" />
     <Compile Include="SqlSugarCrudTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DapperContribCrudTest.cs" />

@@ -7,20 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper.Contrib.Extensions;
+using System.IO;
+using System.Data.SQLite;
 
 namespace EmployeeMgr.DAL.DapperContrib
 {
     public class EmployeeDaoDapperContrib
     {
         private String connStr = @"Server=localhost\sqlexpress;Database=stonetest;Integrated Security=True;";
+
+        //---------------------------------
+        // Connection string for sqlite
+        //---------------------------------
+
+        // Path.GetDirectoryName返回上一级
+        private static String basePath = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
+        private static String dbPath = Path.Combine(basePath, "employees.db");
+        private static string connStrSqlite = $@"data source= {dbPath}; version=3;";
+
         private IDbConnection dbConnection;
 
         private IDbConnection GetConnection()
         {
             if (dbConnection == null) {
-                dbConnection = new SqlConnection(connStr);               
+                //dbConnection = new SqlConnection(connStr);
+                dbConnection = new SQLiteConnection(connStrSqlite);
             }
-
+            System.Console.WriteLine(dbConnection.ConnectionString);
             return dbConnection;
         }
 
@@ -34,11 +47,10 @@ namespace EmployeeMgr.DAL.DapperContrib
             return this.GetConnection().Get<Employee>(id);            
         }
 
-        // Insert() 方法成功返回 0
         public bool Insert(Employee employee)
         {
-            long rv = this.GetConnection().Insert(employee);
-            return rv == 0;
+            long rv = this.GetConnection().Insert(employee) ; // sqlite返回id号
+            return rv != 0; 
         }
 
         // 返回值为bool

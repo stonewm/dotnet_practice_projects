@@ -52,12 +52,17 @@
     <Compile Include="DapperCrudTest.cs" />
     <Compile Include="SqlSugarCrudTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DapperContribCrudTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EmployeeMgr.DAL.DapperContrib\EmployeeMgr.DAL.DapperContrib.csproj">
+      <Project>{8d31fe21-206e-47bb-87d6-610ad751624a}</Project>
+      <Name>EmployeeMgr.DAL.DapperContrib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EmployeeMgr.DAL.Dapper\EmployeeMgr.DAL.Dapper.csproj">
       <Project>{3cb170dc-fded-4110-b61f-7b117d4ec25a}</Project>
       <Name>EmployeeMgr.DAL.Dapper</Name>

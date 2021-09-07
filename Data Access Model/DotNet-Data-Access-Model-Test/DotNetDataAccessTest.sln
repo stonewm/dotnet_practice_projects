@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest1", "UnitTest1\Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeMgr.DAL.Dapper", "EmployeeMgr.DAL.Dapper\EmployeeMgr.DAL.Dapper.csproj", "{3CB170DC-FDED-4110-B61F-7B117D4EC25A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeMgr.DAL.DapperContrib", "EmployeeMgr.DAL.DapperContrib\EmployeeMgr.DAL.DapperContrib.csproj", "{8D31FE21-206E-47BB-87D6-610AD751624A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{3CB170DC-FDED-4110-B61F-7B117D4EC25A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CB170DC-FDED-4110-B61F-7B117D4EC25A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CB170DC-FDED-4110-B61F-7B117D4EC25A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D31FE21-206E-47BB-87D6-610AD751624A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D31FE21-206E-47BB-87D6-610AD751624A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D31FE21-206E-47BB-87D6-610AD751624A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D31FE21-206E-47BB-87D6-610AD751624A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
